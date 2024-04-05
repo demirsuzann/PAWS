@@ -5,7 +5,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
 
-
 st.set_page_config(layout = "wide", page_title="Choose your future friend", page_icon=":service_dog:")
 
 @st.cache_data
@@ -63,14 +62,3 @@ if col_features2.button("Öneri Getir!"):
 
     col_recommendation.image(recommended_dog['url'])
     col_recommendation.write(f"**{recommended_dog['breed']}**")
-
-
-
-
-
-
-
-
-
-
-
