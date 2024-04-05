@@ -48,7 +48,7 @@ Health = col_features1.slider("Health",  min_value=1.0, max_value=5.0, step=0.5,
 Intelligence = col_features1.slider("Intelligence", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
 ExerciseNeeds = col_features1.slider("Exercise Needs", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
 TemperatureTolerance = col_features1.slider("Temperature Tolerance", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
-AgeAverage = col_features1.slider("Age Average", min_value=7.0, max_value=21.0, step=0.5, value=3.0)
+AgeAverage = col_features1.slider("Age Average", min_value=7.0, max_value=21.0, step=0.5, value=14.0)
 ApartmentSuitability = col_features1.slider("Apartment Suitability", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
 Size = col_features1.slider("Size", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
 
