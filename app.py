@@ -62,5 +62,6 @@ if col_features2.button("Öneri Getir!"):
     recommended_index = indices[0][1]
     recommended_dog = df.iloc[recommended_index]
 
-    col_recommendation.image(recommended_dog['url'])
+    col_recommendation.image(recommended_dog['Images'])
     col_recommendation.write(f"**{recommended_dog['breed']}**")
+    col_recommendation.write(f"**{recommended_dog['url']}**")
