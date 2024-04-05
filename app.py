@@ -41,17 +41,16 @@ pipeline = get_pipeline()
 col_features1, col_features2, col_recommendation = recommendation_tab.columns(3)
 
 # Kullanıcı girdilerini al
-Adaptability = col_features1.slider("Adaptability", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-ToleranceAlone = col_features1.slider("Tolerance Alone", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-Friendliness = col_features1.slider("Friendliness", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-Health = col_features1.slider("Health",  min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-Intelligence = col_features1.slider("Intelligence", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-ExerciseNeeds = col_features1.slider("Exercise Needs", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-TemperatureTolerance = col_features1.slider("Temperature Tolerance", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-AgeAverage = col_features1.slider("Age Average", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-MaximumLifespan = col_features1.slider("Maximum Lifespan", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-ApartmentSuitability = col_features1.slider("Apartment Suitability", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
-Size = col_features1.slider("Size", min_value=0.0, max_value=1.0, step=0.1, value=0.5)
+Adaptability = col_features1.slider("Adaptability", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+ToleranceAlone = col_features1.slider("Tolerance Alone", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+Friendliness = col_features1.slider("Friendliness", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+Health = col_features1.slider("Health",  min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+Intelligence = col_features1.slider("Intelligence", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+ExerciseNeeds = col_features1.slider("Exercise Needs", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+TemperatureTolerance = col_features1.slider("Temperature Tolerance", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+AgeAverage = col_features1.slider("Age Average", min_value=7.0, max_value=21.0, step=0.5, value=3.0)
+ApartmentSuitability = col_features1.slider("Apartment Suitability", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
+Size = col_features1.slider("Size", min_value=1.0, max_value=5.0, step=0.5, value=3.0)
 
 features = np.array([Adaptability , ToleranceAlone, Friendliness, Health, Intelligence , ExerciseNeeds, TemperatureTolerance, AgeAverage,ApartmentSuitability,Size]).reshape(1, -1)
 
@@ -59,9 +58,12 @@ if col_features2.button("Öneri Getir!"):
 
     distances, indices = pipeline.named_steps['knn'].kneighbors(pipeline.named_steps['scaler'].transform(features), n_neighbors=10)
 
-    recommended_index = indices[0][1]
-    recommended_dog = df.iloc[recommended_index]
+    for i in range(0, 10):
+      recommended_index = indices[0][i]
+      recommended_dog = df.iloc[recommended_index]
+      recommended_distances = distances[0][i]
 
-    col_recommendation.image(recommended_dog['Images'])
-    col_recommendation.write(f"**{recommended_dog['breed']}**")
-    col_recommendation.write(f"**{recommended_dog['url']}**")
+      col_recommendation.image(recommended_dog['Images'])
+      col_recommendation.write(f"**{recommended_dog['breed']}**")
+      col_recommendation.write(f"**{recommended_dog['url']}**")
+      col_recommendation.write(f"**{recommended_distances}**")
