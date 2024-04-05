@@ -3,6 +3,8 @@ import joblib
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
+import numpy as np 
+import pandas as pd 
 
 
 st.set_page_config(layout = "wide", page_title="Choose your future friend", page_icon=":service_dog:")
