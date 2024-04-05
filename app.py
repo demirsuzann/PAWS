@@ -22,7 +22,7 @@ def get_pipeline():
 
 
 st.title(":dog: :rainbow[My Dog Friend] :dog:")
-main_tab,  recommendation_tab = st.tabs(["Home Page",  "Recommandation System"])
+main_tab,  recommendation_tab = st.tabs(["Home Page",  "Get Recommendation"])
 df = get_data()
 
 # Ana Sayfa
