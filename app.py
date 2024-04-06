@@ -29,9 +29,18 @@ df = get_data()
 
 left_col, right_col = main_tab.columns(2)
 
-left_col.write("""Deciding to welcome a dog into your life is an immensely rewarding decision, but it also comes with significant responsibilities. With hundreds of dog breeds, each possessing its own distinct appearance and characteristics, selecting the ideal one can prove to be a daunting task. Even for those who have a particular breed in mind, factors such as availability or discovering a better-suited alternative can complicate the decision-making process. To address this challenge, I've developed a comprehensive dog recommendation system.
-\nThis system streamlines the process of finding the perfect canine companion by employing either collaborative filtering or content-based filtering methodologies. Collaborative filtering enables users to discover the most popular dog breeds, drawing insights from collective preferences. On the other hand, content-based filtering facilitates the identification of breeds similar to a selected dog breed, leveraging specific traits and attributes.
-\nWhether users seek broad recommendations based on popular choices or targeted suggestions aligning with their preferences, this recommendation system caters to diverse needs. It serves as a valuable resource for individuals exploring dog ownership, particularly those lacking in-depth knowledge about different breeds or harboring specific preferences regarding canine traits.""")
+left_col.write("""Köpek sahiplenmek, yaşamınıza neşe ve sevgi getirecek harika bir karardır. Ancak, hangi köpek ırkının sizin yaşam tarzınıza en uygun olduğunu seçmek önemlidir. İşte sizin için geliştirdiğimiz öneri sistemi, doğru köpek ırkını bulmanıza yardımcı olacak!
+\nAdaptasyon Yeteneği: Köpeğinizin yeni ortamlara ne kadar kolay uyum sağladığı önemlidir. Siz değişiklikleri seviyor musunuz yoksa rutininizden mi hoşlanıyorsunuz?
+\nYalnızlık Toleransı: Köpeğiniz yalnız kaldığında nasıl davranır? Çoğu zaman mı evde yalnız mı kalıyorsunuz?
+\nArkadaş Canlısı Davranış: Evinizde çocuklar veya diğer hayvanlar var mı? Köpeğinizin başkalarıyla iyi geçinmesini mi istiyorsunuz?
+\nSağlık Durumu: Bakım gerektiren köpeklerden mi hoşlanıyorsunuz yoksa daha az bakım isteyenler mi?
+\nZeka Seviyesi: Eğitilebilir bir köpek mi istiyorsunuz yoksa daha bağımsız bir karaktere sahip olan mı?
+\nEgzersiz İhtiyacı: Aktif bir yaşam tarzınız mı var yoksa daha sakin bir ortam mı tercih ediyorsunuz?
+\nSıcaklık Toleransı: İklim şartlarına ne kadar dayanıklı olması önemli mi?
+\nYaş Ortalaması: Köpeğinizin uzun ömürlü olmasını mı istiyorsunuz?
+\nApartman Uygunluğu: Küçük bir dairede mi yaşıyorsunuz yoksa geniş bir bahçeniz mi var?
+\nKüçük, orta veya büyük boyutta bir köpek mi istiyorsunuz?
+\nBu özellikler, sizin için en uygun köpek ırkını belirlemekte yardımcı olacaktır. Öneri sistemimiz, tercihlerinize en iyi şekilde uyacak köpekleri bulmanıza yardımcı olacak ve yeni bir dost kazanmanın ne kadar harika olduğunu gösterecektir!""")
 
 right_col.image("dogs.png", width=600)
 
