@@ -33,7 +33,7 @@ left_col.write("""Deciding to welcome a dog into your life is an immensely rewar
 \nThis system streamlines the process of finding the perfect canine companion by employing either collaborative filtering or content-based filtering methodologies. Collaborative filtering enables users to discover the most popular dog breeds, drawing insights from collective preferences. On the other hand, content-based filtering facilitates the identification of breeds similar to a selected dog breed, leveraging specific traits and attributes.
 \nWhether users seek broad recommendations based on popular choices or targeted suggestions aligning with their preferences, this recommendation system caters to diverse needs. It serves as a valuable resource for individuals exploring dog ownership, particularly those lacking in-depth knowledge about different breeds or harboring specific preferences regarding canine traits.""")
 
-right_col.image("dogs.jpeg", width=600)
+right_col.image("dogs.png", width=600)
 
 pipeline = get_pipeline()
 
