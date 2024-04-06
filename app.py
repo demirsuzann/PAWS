@@ -21,7 +21,7 @@ def get_pipeline():
     return pipeline
 
 
-st.title(":dog: :rainbow[My Dog Friend] :dog:")
+st.title(":dog: :rainbow[Köpek İyi Bir Arkadaştır!] :dog:")
 main_tab,  recommendation_tab = st.tabs(["Home Page",  "Get Recommendation"])
 df = get_data()
 
