@@ -15,9 +15,6 @@ background-image:  url("https://i.pinimg.com/originals/bf/ad/eb/bfadeb0e8849a04a
 background-size: cover;
 background-color: rgba(255, 255, 255, 0.2);
 }
-[data-testid="stApp"] {
-color: rgb(49, 51, 63);
-}
 [data-testid="stHeader"] {
 background-color: rgba(0, 0, 0, 0);
 }
