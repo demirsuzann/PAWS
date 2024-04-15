@@ -159,8 +159,8 @@ Size = option_to_size(col_features[4].select_slider("Boyut", options=sizeOption,
 InexperiencedOwner = option_to_number(col_features[5].select_slider("Deneyimsiz Sahip Uygunluğu", options=numberOptions, value="Orta"))
 Noisy = option_to_ex(col_features[5].select_slider("Havlamaya Yatkınlık", options=exOptions, value="Orta"))
 
-features = np.array([Adaptability, ToleranceAlone, Friendliness, Health, TrainAbility, ExerciseNeeds, Shedding, AgeAverage,
-     ApartmentSuitability, Size, InexperiencedOwner,  Noisy]).reshape(1, -1)
+features = np.array([Adaptability, ApartmentSuitability, InexperiencedOwner, ToleranceAlone, Friendliness, Shedding, Health, Size, TrainAbility,  Noisy, ExerciseNeeds,  AgeAverage
+       ]).reshape(1, -1)
 
 if col_features[2].button("Öneri İstiyorum!"):
     distances, indices = pipeline.named_steps['knn'].kneighbors(pipeline.named_steps['scaler'].transform(features),
