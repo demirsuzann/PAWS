@@ -192,7 +192,7 @@ def draw_dog(parent, dog):
     parent.write(f"**{dog['breed']}**")
     parent.image(dog['Images'], use_column_width=True)
     parent.write(f"**{dog['url']}**")
-    parent.write(f"**Grubu:** **{dog['breed_group']}**")
+#parent.write(f"**Grubu:** **{dog['breed_group']}**")
 
 
 if group_tab.button("Öneri ver!"):
