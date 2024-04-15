@@ -152,7 +152,7 @@ Friendliness = option_to_number(col_features[1].select_slider("Arkadaş Canlıs�
 Health = option_to_number(col_features[1].select_slider("Sağlık", options=numberOptions, value="Orta"))
 TrainAbility = option_to_number(col_features[2].select_slider("Eğitilme Seviyesi", options=numberOptions, value="Orta"))
 ExerciseNeeds = option_to_ex(col_features[2].select_slider("Egzersiz İhtiyacı", options=exOptions, value="Orta"))
-Shedding = option_to_ex(col_features[3].select_slider("Düy Dökme", options=exOptions, value="Orta"))
+Shedding = option_to_ex(col_features[3].select_slider("Tüy Dökme Derecesi", options=exOptions, value="Orta"))
 AgeAverage = option_to_ex(col_features[3].select_slider("Yaşam Ortalaması(Yıl)", options=exOptions, value="Orta"))
 ApartmentSuitability = option_to_number(col_features[4].select_slider("Apartman Uygunluğu", options=numberOptions, value="Orta"))
 Size = option_to_size(col_features[4].select_slider("Boyut", options=sizeOption, value="Orta"))
@@ -180,7 +180,7 @@ if col_features[2].button("Öneri İstiyorum!"):
             col.write(f"**{recommended_dog['breed']}**")
             col.image(recommended_dog['Images'],use_column_width=True)
             col.write(f"**{recommended_dog['url']}**")
-            col.write(f"**Grubu:** **{recommended_dog['breed_group']}**")
+            col.write(f"**Grubu:** {recommended_dog['breed_group']}")
 #col.write(f"KNN Uzaklık: {recommended_dog_distance}")
 
 
