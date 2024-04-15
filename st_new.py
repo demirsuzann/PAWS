@@ -181,7 +181,7 @@ if col_features[2].button("Öneri İstiyorum!"):
             col.image(recommended_dog['Images'],use_column_width=True)
             col.write(f"**{recommended_dog['url']}**")
             col.write(f"**Grubu:** **{recommended_dog['breed_group']}**")
-            col.write(f"KNN Uzaklık: {recommended_dog_distance}")
+#col.write(f"KNN Uzaklık: {recommended_dog_distance}")
 
 
 #Köpek Grubuna Göre Öneri Getir
