@@ -63,7 +63,7 @@ with main_tab:
 \n**Eğitilme Seviyesi**: Eğitilebilir bir köpek mi istiyorsunuz yoksa daha bağımsız bir karaktere sahip olan mı?
 \n**Egzersiz İhtiyacı**: Aktif bir yaşam tarzınız mı var yoksa daha sakin bir ortam mı tercih ediyorsunuz?
 \n**Tüy Dökme**: Tüy dökme oranı köpek seçiminiz için önemli mi?
-\n**Yaşam Ortalaması**: Köpeğinizin uzun ömürlü olmasını mı istiyorsunuz?
+\n**Yaşam Ortalaması**: Köpeğinizin uzun ömürlü olmasını mı istiyorsunuz? Düşük yaş ortalaması 6 yıl ve altı iken yüksek yaş ortalaması 19 yıl ve üzerine tekabül etmektedir.
 \n**Apartman Uygunluğu**: Küçük bir dairede mi yaşıyorsunuz yoksa geniş bir bahçeniz mi var?
 \n**Deneyimsiz Sahip Uygunluğu**: İlk kez mi bir köpek sahibi olacaksınız? Deneyimsizliğinize uygun köpek tercih etmek ister misiniz?
 \n**Havlamaya Yatkınlık**: Köpeğiniz havlamaya yatkınlığı tercihinizi belirler mi?
@@ -153,7 +153,7 @@ Health = option_to_number(col_features[1].select_slider("Sağlık", options=numb
 TrainAbility = option_to_number(col_features[2].select_slider("Eğitilme Seviyesi", options=numberOptions, value="Orta"))
 ExerciseNeeds = option_to_ex(col_features[2].select_slider("Egzersiz İhtiyacı", options=exOptions, value="Orta"))
 Shedding = option_to_ex(col_features[3].select_slider("Tüy Dökme Derecesi", options=exOptions, value="Orta"))
-AgeAverage = option_to_ex(col_features[3].select_slider("Yaşam Ortalaması(Yıl)", options=exOptions, value="Orta"))
+AgeAverage = option_to_ex(col_features[3].select_slider("Yaşam Ortalaması", options=exOptions, value="Orta"))
 ApartmentSuitability = option_to_number(col_features[4].select_slider("Apartman Uygunluğu", options=numberOptions, value="Orta"))
 Size = option_to_size(col_features[4].select_slider("Boyut", options=sizeOption, value="Orta"))
 InexperiencedOwner = option_to_number(col_features[5].select_slider("Deneyimsiz Sahip Uygunluğu", options=numberOptions, value="Orta"))
